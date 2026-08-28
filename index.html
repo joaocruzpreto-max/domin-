@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dominó</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🀄 Dominó</h1>
+        <p>Jogue contra o computador</p>
+    </header>
+
+    <main>
+        <section class="placar">
+            <div>
+                <span>Você</span>
+                <strong id="playerScore">0</strong>
+            </div>
+
+            <div>
+                <span>Computador</span>
+                <strong id="computerScore">0</strong>
+            </div>
+        </section>
+
+        <section class="mesa">
+            <h2>Mesa</h2>
+            <div id="board" class="board">
+                <p class="empty">Coloque uma peça para começar!</p>
+            </div>
+        </section>
+
+        <section class="status">
+            <p id="status">Clique em "Nova Partida" para começar.</p>
+        </section>
+
+        <section class="mao">
+            <h2>Suas peças</h2>
+            <div id="playerHand" class="hand"></div>
+        </section>
+
+        <section class="controles">
+            <button id="newGame">Nova Partida</button>
+            <button id="drawTile" disabled>Comprar Peça</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Jogo de Dominó • Feito com HTML, CSS e JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #123c2f, #071f18);
+    color: white;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 30px 20px 15px;
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #b9d8cc;
+}
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.placar {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin: 20px 0;
+}
+
+.placar div {
+    background: #174c3c;
+    border: 1px solid #2c705c;
+    border-radius: 12px;
+    padding: 15px 35px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.placar span {
+    display: block;
+    color: #b9d8cc;
+    margin-bottom: 5px;
+}
+
+.placar strong {
+    font-size: 30px;
+    color: #ffd54a;
+}
+
+.mesa {
+    background: #176044;
+    border: 8px solid #6d4325;
+    border-radius: 20px;
+    min-height: 260px;
+    padding: 20px;
+    box-shadow:
+        inset 0 0 30px rgba(0, 0, 0, 0.3),
+        0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.mesa h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.board {
+    min-height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.empty {
+    color: #9bc6b7;
+    font-style: italic;
+}
+
+.status {
+    text-align: center;
+    margin: 20px 0;
+    min-height: 25px;
+}
+
+#status {
+    color: #ffe789;
+    font-weight: bold;
+}
+
+.mao {
+    margin-top: 20px;
+}
+
+.mao h2 {
+    margin-bottom: 15px;
+}
+
+.hand {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 100px;
+}
+
+.domino {
+    width: 70px;
+    height: 120px;
+    background: #f4f0df;
+    border: 3px solid #222;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    color: #111;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.35);
+}
+
+.domino .half {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding: 7px;
+    position: relative;
+}
+
+.domino .half:first-child {
+    border-bottom: 2px solid #222;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: #111;
+    border-radius: 50%;
+    align-self: center;
+    justify-self: center;
+}
+
+.domino-button {
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: none;
+}
+
+.domino-button:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.5);
+}
+
+.domino-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+.board .domino {
+    width: 50px;
+    height: 86px;
+}
+
+.board .domino .half {
+    padding: 4px;
+}
+
+.board .dot {
+    width: 7px;
+    height: 7px;
+}
+
+.controles {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 25px 0 40px;
+}
+
+button {
+    background: #ffd54a;
+    color: #222;
+    border: none;
+    padding: 13px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover:not(:disabled) {
+    background: #ffea91;
+    transform: scale(1.04);
+}
+
+button:disabled {
+    background: #777;
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #8fb6a9;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 32px;
+    }
+
+    .placar {
+        gap: 15px;
+    }
+
+    .placar div {
+        padding: 12px 20px;
+    }
+
+    .domino {
+        width: 55px;
+        height: 100px;
+    }
+
+    .controles {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}
